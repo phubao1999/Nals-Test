@@ -7,7 +7,7 @@ import { PaginationComponent } from './home/section/pagination/pagination.compon
 import { ModelSearchComponent } from './home/section/model-search/model-search.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeContainerComponent } from './home/Homecontainer/container.component';
-import { DetailsComponent } from './details/details.component';
+import { DetailsComponent } from './views/details/details.component';
 
 @NgModule({
   declarations: [
