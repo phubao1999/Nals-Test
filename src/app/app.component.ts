@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'nals-test';
+  // TODO: Interceptor(Handle Success, Error), Pagination, Details, Search, Model
 }

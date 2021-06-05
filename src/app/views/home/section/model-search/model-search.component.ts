@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
@@ -7,25 +7,26 @@ import { EventEmitter } from '@angular/core';
   styleUrls: ['./model-search.component.scss'],
 })
 export class ModelSearchComponent implements OnInit {
-  @Output() emitSearchData: EventEmitter<any> = new EventEmitter();
-
-  data = {
+  filterData = {
     entries: 5,
     search: '',
   };
+  @Output() emitSearchData: EventEmitter<any> = new EventEmitter();
+  @Output() emitResetData: EventEmitter<any> = new EventEmitter();
+
   constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   resetData() {
-    this.data = {
+    this.filterData = {
       entries: 5,
       search: '',
     };
+    this.emitResetData.emit(this.filterData);
   }
 
   searchData() {
-    this.emitSearchData.emit(this.data);
+    this.emitSearchData.emit(this.filterData);
   }
 }

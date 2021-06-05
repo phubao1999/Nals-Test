@@ -1,5 +1,6 @@
 <div class="container my-2">
-  <app-model-search (emitSearchData)="searchData($event)"></app-model-search>
-  <app-data-table></app-data-table>
+  <app-model-search (emitSearchData)="searchData($event)" (emitResetData)="resetSearchFillter($event)">
+  </app-model-search>
+  <app-data-table [data]="dataList"></app-data-table>
   <app-pagination></app-pagination>
 </div>

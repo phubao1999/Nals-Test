@@ -2,7 +2,7 @@
   <div class="col-sm-4 d-flex align-items-center">
     <span>Select</span>
     <div class="dropdown m-1">
-      <select class="w-auto form-select" aria-label="Default select example" [(ngModel)]="data.entries">
+      <select class="w-auto form-select" aria-label="Default select example" [(ngModel)]="filterData.entries">
         <option value="5">5</option>
         <option value="10">10</option>
         <option value="15">15</option>
@@ -11,7 +11,7 @@
     <span>Entries</span>
   </div>
   <div class="col-md-4">
-    <input type="text" class="form-control" placeholder="Search" aria-label="Search" [(ngModel)]="data.search">
+    <input type="text" class="form-control" placeholder="Search" aria-label="Search" [(ngModel)]="filterData.search">
   </div>
   <div class="col-md-4">
     <div class="row">

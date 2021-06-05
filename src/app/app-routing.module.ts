@@ -6,7 +6,7 @@ import { DetailsComponent } from './views/details/details.component';
 
 const routes: Routes = [
   { path: '', component: HomeContainerComponent },
-  { path: 'details', component: DetailsComponent },
+  { path: 'details/:id', component: DetailsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
