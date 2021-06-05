@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeContainerComponent } from './views/home/Homecontainer/container.component';
 import { DetailsComponent } from './views/details/details.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
     DetailsComponent,
     PageNotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
