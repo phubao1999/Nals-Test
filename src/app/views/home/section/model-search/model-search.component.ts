@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { ApplicationProperties } from 'src/app/common/application.properties';
 
 @Component({
   selector: 'app-model-search',
@@ -8,7 +9,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class ModelSearchComponent implements OnInit {
   filterData = {
-    entries: 5,
+    entries: ApplicationProperties.RECORD_IN_PAGE,
     search: '',
   };
   @Output() emitSearchData: EventEmitter<any> = new EventEmitter();
@@ -20,7 +21,7 @@ export class ModelSearchComponent implements OnInit {
 
   resetData() {
     this.filterData = {
-      entries: 5,
+      entries: ApplicationProperties.RECORD_IN_PAGE,
       search: '',
     };
     this.emitResetData.emit(this.filterData);

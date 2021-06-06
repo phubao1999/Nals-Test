@@ -1,3 +1,4 @@
+import { ApplicationProperties } from 'src/app/common/application.properties';
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from '../home.service';
 @Component({
@@ -7,7 +8,7 @@ import { HomeService } from '../home.service';
 })
 export class HomeContainerComponent implements OnInit {
   filterDataOrigin = {
-    entries: 5,
+    entries: ApplicationProperties.RECORD_IN_PAGE,
     search: '',
   };
   dataList;
